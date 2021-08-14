@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<persons>
+  <person id="1">
+    <firstname>John</firstname>
+    <middlename>Fitzgerald</middlename>
+    <lastname>Kennedy</lastname>
+    <birthday>1917-05-29T00:00:00</birthday>
+  </person>
+  <person id="2">
+    <firstname>Robert</firstname>
+    <middlename />
+    <lastname>Kennedy</lastname>
+    <birthday>1925-11-20T00:00:00</birthday>
+  </person>
+  <person id="3">
+    <firstname>Jacqueline</firstname>
+    <lastname>Kennedy Onassis</lastname>
+    <birthday>1929-07-28T00:00:00</birthday>
+  </person>
+  <description>kennedy family</description>
+</persons>
