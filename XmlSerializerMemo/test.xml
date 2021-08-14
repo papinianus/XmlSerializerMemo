@@ -5,17 +5,20 @@
     <middlename>Fitzgerald</middlename>
     <lastname>Kennedy</lastname>
     <birthday>1917-05-29T00:00:00</birthday>
+    <sex>Male</sex>
   </person>
   <person id="2">
     <firstname>Robert</firstname>
     <middlename />
     <lastname>Kennedy</lastname>
     <birthday>1925-11-20T00:00:00</birthday>
+    <sex>Other</sex>
   </person>
   <person id="3">
     <firstname>Jacqueline</firstname>
     <lastname>Kennedy Onassis</lastname>
     <birthday>1929-07-28T00:00:00</birthday>
+    <sex>Female</sex>
   </person>
   <description>kennedy family</description>
 </persons>

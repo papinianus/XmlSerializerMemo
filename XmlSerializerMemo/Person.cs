@@ -1,50 +1,65 @@
 using System;
+using System.Xml.Serialization;
 
 namespace XmlSerializerMemo
 {
     public class Person
     {
+        public enum Sex
+        {
+            [XmlEnum("Male")]
+            Male,
+            [XmlEnum("Female")]
+            Female,
+            [XmlEnum("Other")]
+            Other
+        }
         /// <summary>
         /// ID
         /// example for attribute, integer
         /// </summary>
-        [System.Xml.Serialization.XmlAttribute("id")]
+        [XmlAttribute("id")]
         public int Id { get; set; }
         /// <summary>
         /// First Name
         /// </summary>
-        [System.Xml.Serialization.XmlElement("firstname")]
+        [XmlElement("firstname")]
         public string FirstName { get; set; }
         /// <summary>
         /// Middle Name
         /// example for null and empty element
         /// </summary>
-        [System.Xml.Serialization.XmlElement("middlename")]
+        [XmlElement("middlename")]
         public string MiddleName { get; set; }
         /// <summary>
         /// Last Name
         /// </summary>
-        [System.Xml.Serialization.XmlElement("lastname")]
+        [XmlElement("lastname")]
         public string LastName { get; set; }
         /// <summary>
         /// Birth Day
         /// </summary>
-        [System.Xml.Serialization.XmlElement("birthday")]
+        [XmlElement("birthday")]
         public DateTime Birthday { get; set; }
         /// <summary>
         /// Address
         /// private won't be serialized
         /// </summary>
-        [System.Xml.Serialization.XmlElement("address")]
+        [XmlElement("address")]
         private string Address { get; set; }
-
         /// <summary>
         /// Age
         /// for Ignore
         /// </summary>
-        [System.Xml.Serialization.XmlIgnore]
+        [XmlIgnore]
         public int Age { get; set; } = 0;
+        /// <summary>
+        /// Sex
+        /// for Enum
+        /// </summary>
+        [XmlElement("sex")]
+        public Sex Sexual { get; set; }
 
-        public override string ToString() => $"ID = {Id}, FirstName = {FirstName}, MiddleName = {MiddleName}, LastName = {LastName}, Birthday = {Birthday}, Address = {Address}, Age = {Age}";
+        public override string ToString() => $"ID = {Id}, FirstName = {FirstName}, MiddleName = {MiddleName}, LastName = {LastName}, Birthday = {Birthday}, Address = {Address}, Age = {Age}, Sex = {Sexual}";
     }
 }

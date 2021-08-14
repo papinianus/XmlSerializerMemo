@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Globalization;
 
-// http://park1.wakwak.com/~ima/dotnet_cs_xmlserializer0001.html
 namespace XmlSerializerMemo
 {
     class Program
@@ -19,6 +18,7 @@ namespace XmlSerializerMemo
                 LastName = kennedy,
                 Birthday = DateTime.ParseExact("1917年05月29日", dateFormat, CultureInfo.CurrentCulture),
                 Age = 46,
+                Sexual = Person.Sex.Male,
             };
             var bobby = new Person
             {
@@ -28,6 +28,7 @@ namespace XmlSerializerMemo
                 LastName = kennedy,
                 Birthday = DateTime.ParseExact("1925年11月20日", dateFormat, CultureInfo.CurrentCulture),
                 Age = 42,
+                Sexual = Person.Sex.Other,
             };
             var jacky = new Person
             {
@@ -37,6 +38,7 @@ namespace XmlSerializerMemo
                 LastName = $"{kennedy} Onassis",
                 Birthday = DateTime.ParseExact("1929年07月28日", dateFormat, CultureInfo.CurrentCulture),
                 Age = 64,
+                Sexual = Person.Sex.Female,
             };
             var kennedies = new Persons
             {
